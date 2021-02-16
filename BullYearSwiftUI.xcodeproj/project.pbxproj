@@ -19,6 +19,7 @@
 		3779ADB525DBAE040077DEE8 /* IssueListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3779ADB425DBAE040077DEE8 /* IssueListView.swift */; };
 		3779ADBD25DBAE1F0077DEE8 /* IssueListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3779ADBC25DBAE1F0077DEE8 /* IssueListCell.swift */; };
 		3779ADC625DBB0E10077DEE8 /* IssueDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3779ADC525DBB0E10077DEE8 /* IssueDetailView.swift */; };
+		3779ADCC25DBC78C0077DEE8 /* IssueRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3779ADCB25DBC78C0077DEE8 /* IssueRequests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		3779ADB425DBAE040077DEE8 /* IssueListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueListView.swift; sourceTree = "<group>"; };
 		3779ADBC25DBAE1F0077DEE8 /* IssueListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueListCell.swift; sourceTree = "<group>"; };
 		3779ADC525DBB0E10077DEE8 /* IssueDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueDetailView.swift; sourceTree = "<group>"; };
+		3779ADCB25DBC78C0077DEE8 /* IssueRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IssueRequests.swift; path = BullYearSwiftUI/Infra/IssueRequests.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +159,7 @@
 		3779AD9F25DBA37F0077DEE8 /* Infra */ = {
 			isa = PBXGroup;
 			children = (
+				3779ADCA25DBBEB80077DEE8 /* Issue */,
 				3779ADA925DBA4740077DEE8 /* API.swift */,
 				3779ADAE25DBA4840077DEE8 /* APIRequestConfiguration.swift */,
 			);
@@ -186,6 +189,14 @@
 				3779ADC525DBB0E10077DEE8 /* IssueDetailView.swift */,
 			);
 			path = IssueDetail;
+			sourceTree = "<group>";
+		};
+		3779ADCA25DBBEB80077DEE8 /* Issue */ = {
+			isa = PBXGroup;
+			children = (
+				3779ADCB25DBC78C0077DEE8 /* IssueRequests.swift */,
+			);
+			path = Issue;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -321,6 +332,7 @@
 				3779ADB525DBAE040077DEE8 /* IssueListView.swift in Sources */,
 				3779AD7025DBA2540077DEE8 /* ContentView.swift in Sources */,
 				3779AD6E25DBA2540077DEE8 /* BullYearSwiftUIApp.swift in Sources */,
+				3779ADCC25DBC78C0077DEE8 /* IssueRequests.swift in Sources */,
 				3779ADAF25DBA4840077DEE8 /* APIRequestConfiguration.swift in Sources */,
 				3779ADAA25DBA4740077DEE8 /* API.swift in Sources */,
 				3779ADA225DBA3D00077DEE8 /* Issue.swift in Sources */,
