@@ -22,6 +22,7 @@
 		3779ADCC25DBC78C0077DEE8 /* IssueRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3779ADCB25DBC78C0077DEE8 /* IssueRequests.swift */; };
 		3779ADD925DBCF980077DEE8 /* LazyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3779ADD825DBCF980077DEE8 /* LazyView.swift */; };
 		3779ADE925DBDDF90077DEE8 /* IssueListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3779ADE825DBDDF90077DEE8 /* IssueListViewModel.swift */; };
+		3779ADF125DBE2880077DEE8 /* URLImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3779ADF025DBE2880077DEE8 /* URLImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		3779ADCB25DBC78C0077DEE8 /* IssueRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IssueRequests.swift; path = BullYearSwiftUI/Infra/IssueRequests.swift; sourceTree = SOURCE_ROOT; };
 		3779ADD825DBCF980077DEE8 /* LazyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyView.swift; sourceTree = "<group>"; };
 		3779ADE825DBDDF90077DEE8 /* IssueListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueListViewModel.swift; sourceTree = "<group>"; };
+		3779ADF025DBE2880077DEE8 /* URLImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +211,7 @@
 			isa = PBXGroup;
 			children = (
 				3779ADD825DBCF980077DEE8 /* LazyView.swift */,
+				3779ADF025DBE2880077DEE8 /* URLImage.swift */,
 			);
 			path = CommonViews;
 			sourceTree = "<group>";
@@ -349,6 +352,7 @@
 				3779ADCC25DBC78C0077DEE8 /* IssueRequests.swift in Sources */,
 				3779ADE925DBDDF90077DEE8 /* IssueListViewModel.swift in Sources */,
 				3779ADAF25DBA4840077DEE8 /* APIRequestConfiguration.swift in Sources */,
+				3779ADF125DBE2880077DEE8 /* URLImage.swift in Sources */,
 				3779ADAA25DBA4740077DEE8 /* API.swift in Sources */,
 				3779ADA225DBA3D00077DEE8 /* Issue.swift in Sources */,
 				3779ADD925DBCF980077DEE8 /* LazyView.swift in Sources */,

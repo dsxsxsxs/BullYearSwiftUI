@@ -11,7 +11,14 @@ struct IssueListView: View {
     var body: some View {
         NavigationView {
             List(0..<20) { _ in
-                IssueListCell()
+                NavigationLink(
+                    destination: LazyView {
+                        IssueDetailView()
+                    },
+                    label: {
+                        IssueListCell()
+                    }
+                )
             }
             .navigationTitle("リスト")
             .navigationBarTitleDisplayMode(.inline)

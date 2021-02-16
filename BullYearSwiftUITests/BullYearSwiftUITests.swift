@@ -21,6 +21,15 @@ class BullYearSwiftUITests: XCTestCase {
     func testExample() throws {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        let expection = XCTestExpectation()
+        let sub = API().connect(config: IssueListRequest(page: 1))
+            .sink(receiveCompletion: { _ in }) {
+
+                XCTAssertFalse($0.isEmpty)
+                expection.fulfill()
+            }
+        wait(for: [expection], timeout: 5)
+        sub.cancel()
     }
 
     func testPerformanceExample() throws {

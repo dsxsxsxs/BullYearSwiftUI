@@ -35,6 +35,10 @@ struct IssueDetailView: View {
 
 struct IssueDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        IssueDetailView()
+        Group {
+            IssueDetailView()
+            IssueDetailView()
+                .preferredColorScheme(.dark)
+        }
     }
 }
