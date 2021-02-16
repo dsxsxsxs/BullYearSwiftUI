@@ -23,6 +23,7 @@
 		3779ADD925DBCF980077DEE8 /* LazyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3779ADD825DBCF980077DEE8 /* LazyView.swift */; };
 		3779ADE925DBDDF90077DEE8 /* IssueListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3779ADE825DBDDF90077DEE8 /* IssueListViewModel.swift */; };
 		3779ADF125DBE2880077DEE8 /* URLImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3779ADF025DBE2880077DEE8 /* URLImage.swift */; };
+		3787EA8B25DC1DB8003818FA /* Publisher+WithLatestFrom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3787EA8A25DC1DB8003818FA /* Publisher+WithLatestFrom.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		3779ADD825DBCF980077DEE8 /* LazyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyView.swift; sourceTree = "<group>"; };
 		3779ADE825DBDDF90077DEE8 /* IssueListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueListViewModel.swift; sourceTree = "<group>"; };
 		3779ADF025DBE2880077DEE8 /* URLImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImage.swift; sourceTree = "<group>"; };
+		3787EA8A25DC1DB8003818FA /* Publisher+WithLatestFrom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publisher+WithLatestFrom.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 				3779AD6D25DBA2540077DEE8 /* BullYearSwiftUIApp.swift */,
 				3779AD7125DBA2550077DEE8 /* Assets.xcassets */,
 				3779AD7625DBA2550077DEE8 /* Info.plist */,
+				3787EA8925DC1D9D003818FA /* Extensions */,
 				3779AD7325DBA2550077DEE8 /* Preview Content */,
 			);
 			path = BullYearSwiftUI;
@@ -214,6 +217,14 @@
 				3779ADF025DBE2880077DEE8 /* URLImage.swift */,
 			);
 			path = CommonViews;
+			sourceTree = "<group>";
+		};
+		3787EA8925DC1D9D003818FA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3787EA8A25DC1DB8003818FA /* Publisher+WithLatestFrom.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -354,6 +365,7 @@
 				3779ADAF25DBA4840077DEE8 /* APIRequestConfiguration.swift in Sources */,
 				3779ADF125DBE2880077DEE8 /* URLImage.swift in Sources */,
 				3779ADAA25DBA4740077DEE8 /* API.swift in Sources */,
+				3787EA8B25DC1DB8003818FA /* Publisher+WithLatestFrom.swift in Sources */,
 				3779ADA225DBA3D00077DEE8 /* Issue.swift in Sources */,
 				3779ADD925DBCF980077DEE8 /* LazyView.swift in Sources */,
 				3779ADC625DBB0E10077DEE8 /* IssueDetailView.swift in Sources */,

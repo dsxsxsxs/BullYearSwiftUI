@@ -8,28 +8,29 @@
 import SwiftUI
 
 struct IssueListCell: View {
+    let issue: Issue
     var body: some View {
         HStack(alignment: .bottom) {
             VStack(alignment: .leading, spacing: 8.0) {
-                Text("An Issue")
+                Text(issue.title)
                     .font(/*@START_MENU_TOKEN@*/.title2/*@END_MENU_TOKEN@*/)
                     .fontWeight(.medium)
                     .lineLimit(Int.max)
                     .minimumScaleFactor(0.5)
                 HStack(alignment: .bottom, spacing: 8.0) {
-                    Text("desc digest")
+                    Text(issue.body)
                         .font(.subheadline)
                         .fontWeight(.light)
                         .lineLimit(1)
                     Spacer()
-                    Text("dsxsxsxs")
+                    Text(issue.user.login)
                         .font(.body)
                         .minimumScaleFactor(0.5)
                         .lineLimit(1)
                 }
             }
             Spacer()
-            Image(systemName: "person.fill")
+            URLImage(url: issue.user.avatarURL, placeholder: UIImage(systemName: "person.fill"))
                 .frame(width: 32.0, height: 32.0)
         }
     }
@@ -38,7 +39,7 @@ struct IssueListCell: View {
 
 struct IssueListCell_Previews: PreviewProvider {
     static var previews: some View {
-        IssueListCell()
+        IssueListCell(issue: Issue(number: 0, title: "abc", body: "abc", url: URL(string: "https://ab")!, user: User(login: "dsxsxsxs", avatarURL: URL(string: "https://ab")!)))
             .previewLayout(.sizeThatFits)
     }
 }
