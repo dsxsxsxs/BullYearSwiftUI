@@ -20,6 +20,8 @@
 		3779ADBD25DBAE1F0077DEE8 /* IssueListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3779ADBC25DBAE1F0077DEE8 /* IssueListCell.swift */; };
 		3779ADC625DBB0E10077DEE8 /* IssueDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3779ADC525DBB0E10077DEE8 /* IssueDetailView.swift */; };
 		3779ADCC25DBC78C0077DEE8 /* IssueRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3779ADCB25DBC78C0077DEE8 /* IssueRequests.swift */; };
+		3779ADD925DBCF980077DEE8 /* LazyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3779ADD825DBCF980077DEE8 /* LazyView.swift */; };
+		3779ADE925DBDDF90077DEE8 /* IssueListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3779ADE825DBDDF90077DEE8 /* IssueListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		3779ADBC25DBAE1F0077DEE8 /* IssueListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueListCell.swift; sourceTree = "<group>"; };
 		3779ADC525DBB0E10077DEE8 /* IssueDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueDetailView.swift; sourceTree = "<group>"; };
 		3779ADCB25DBC78C0077DEE8 /* IssueRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IssueRequests.swift; path = BullYearSwiftUI/Infra/IssueRequests.swift; sourceTree = SOURCE_ROOT; };
+		3779ADD825DBCF980077DEE8 /* LazyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyView.swift; sourceTree = "<group>"; };
+		3779ADE825DBDDF90077DEE8 /* IssueListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				3779AD9B25DBA3440077DEE8 /* Screens */,
+				3779ADD725DBCF6C0077DEE8 /* CommonViews */,
 				3779ADA025DBA3930077DEE8 /* Domain */,
 				3779AD9F25DBA37F0077DEE8 /* Infra */,
 				3779AD6D25DBA2540077DEE8 /* BullYearSwiftUIApp.swift */,
@@ -177,8 +182,9 @@
 		3779ADB325DBADF40077DEE8 /* IssueList */ = {
 			isa = PBXGroup;
 			children = (
-				3779ADB425DBAE040077DEE8 /* IssueListView.swift */,
 				3779ADBC25DBAE1F0077DEE8 /* IssueListCell.swift */,
+				3779ADB425DBAE040077DEE8 /* IssueListView.swift */,
+				3779ADE825DBDDF90077DEE8 /* IssueListViewModel.swift */,
 			);
 			path = IssueList;
 			sourceTree = "<group>";
@@ -197,6 +203,14 @@
 				3779ADCB25DBC78C0077DEE8 /* IssueRequests.swift */,
 			);
 			path = Issue;
+			sourceTree = "<group>";
+		};
+		3779ADD725DBCF6C0077DEE8 /* CommonViews */ = {
+			isa = PBXGroup;
+			children = (
+				3779ADD825DBCF980077DEE8 /* LazyView.swift */,
+			);
+			path = CommonViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -333,9 +347,11 @@
 				3779AD7025DBA2540077DEE8 /* ContentView.swift in Sources */,
 				3779AD6E25DBA2540077DEE8 /* BullYearSwiftUIApp.swift in Sources */,
 				3779ADCC25DBC78C0077DEE8 /* IssueRequests.swift in Sources */,
+				3779ADE925DBDDF90077DEE8 /* IssueListViewModel.swift in Sources */,
 				3779ADAF25DBA4840077DEE8 /* APIRequestConfiguration.swift in Sources */,
 				3779ADAA25DBA4740077DEE8 /* API.swift in Sources */,
 				3779ADA225DBA3D00077DEE8 /* Issue.swift in Sources */,
+				3779ADD925DBCF980077DEE8 /* LazyView.swift in Sources */,
 				3779ADC625DBB0E10077DEE8 /* IssueDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
