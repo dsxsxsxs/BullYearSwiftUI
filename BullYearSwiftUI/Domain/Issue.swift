@@ -12,14 +12,17 @@ struct User {
     let avatarURL: URL
 }
 
-extension User: Decodable {
+extension User: Decodable, Hashable {
     private enum CodingKeys: String, CodingKey {
         case login
         case avatarURL = "avatar_url"
     }
 }
 
-struct Issue {
+struct Issue: Identifiable, Hashable {
+    var id: Int {
+        self.hashValue
+    }
     let number: Int
     let title: String
     let body: String

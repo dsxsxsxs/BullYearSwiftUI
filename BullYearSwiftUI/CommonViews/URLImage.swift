@@ -6,12 +6,13 @@
 //
 import SwiftUI
 import Combine
+import Dispatch
 
-protocol URLImageLoaderProtocol {
+protocol ImageLoaderProtocol {
     func load(url: URL) -> AnyPublisher<UIImage, Error>
 }
 
-struct URLSessionImageLoader: URLImageLoaderProtocol {
+private struct URLSessionLoader: ImageLoaderProtocol {
     func load(url: URL) -> AnyPublisher<UIImage, Error> {
         URLSession.shared.dataTaskPublisher(for: url)
             .map { UIImage(data: $0.data) ?? UIImage() }
@@ -20,28 +21,41 @@ struct URLSessionImageLoader: URLImageLoaderProtocol {
     }
 }
 
-private final class ImageState: ObservableObject {
+private final class URLImageState: ObservableObject {
     @Published var image = UIImage()
-    private var loader: URLImageLoaderProtocol?
+    private let loader: ImageLoaderProtocol
+    private let url: URL
+    private let placeholder: UIImage?
 
-    func load(url: URL, using loader: URLImageLoaderProtocol) {
+    init(url: URL, placeholder: UIImage?, loader: ImageLoaderProtocol) {
+        self.url = url
+        self.placeholder = placeholder
+        self.image = placeholder ?? UIImage()
         self.loader = loader
+    }
+
+    func load() {
         loader.load(url: url)
-            .replaceError(with: UIImage())
+            .replaceError(with: placeholder ?? UIImage())
+            .receive(on: DispatchQueue.main)
             .assign(to: &$image)
     }
 }
 
 
 struct URLImage: View {
-    @ObservedObject private var imageState = ImageState()
-    init(url: URL, loader: URLImageLoaderProtocol = URLSessionImageLoader()) {
-        imageState.load(url: url, using: loader)
+    @ObservedObject private var state: URLImageState
+
+    init(url: URL, placeholder: UIImage? = nil, loader: ImageLoaderProtocol = URLSessionLoader()) {
+        state = .init(url: url, placeholder: placeholder, loader: loader)
     }
 
     var body: some View {
-        Image(uiImage: imageState.image)
+        Image(uiImage: state.image)
             .resizable()
             .aspectRatio(contentMode: .fit)
+            .onAppear {
+                state.load()
+            }
     }
 }

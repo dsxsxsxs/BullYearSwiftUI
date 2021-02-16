@@ -8,7 +8,6 @@
 import Foundation
 
 struct IssueListRequest: APIRequestConfiguration {
-
     typealias Failure = Error
     typealias Response = [Issue]
     let urlRequest: URLRequest
