@@ -11,31 +11,11 @@ protocol NetworkClient {
     func execute(request: URLRequest) -> AnyPublisher<(Data, URLResponse), Error>
 }
 
-private struct URLSessionClient: NetworkClient {
-    func execute(request: URLRequest) -> AnyPublisher<(Data, URLResponse), Error> {
-        URLSession.shared.dataTaskPublisher(for: request)
-            .map { $0 }
-            .mapError { $0 }
-            .eraseToAnyPublisher()
-    }
-}
-
 struct API {
-    private let client: NetworkClient = URLSessionClient()
+    private let client: NetworkClient
 
     func connect<Config: APIRequestConfiguration>(config: Config) -> AnyPublisher<Config.Response, Config.Failure> where Config.Failure: Swift.Error {
-        client.execute(request: config.urlRequest)
-            .mapError { config.map(error: Error.urlSessionError($0)) }
-            .tryMap {
-                let data = try Self.handle(data: $0, response: $1)
-                do {
-                    return try config.decode(from: data)
-                } catch let error {
-                    throw Error.decodingError(error)
-                }
-            }
-            .mapError { config.map(error: $0 as! Error) }
-            .eraseToAnyPublisher()
+        fatalError()
     }
 
     private static func handle(data: Data, response urlResponse: URLResponse) throws -> Data {
